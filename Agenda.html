@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva Quetzal</title>
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <header class="header-menu jumbotron shadow-lg fixed-top">
+    <nav class="navbar navbar-expand-md shadow-sm">
+      <figure class="figure navbar-brand m-0 p-0">
+        <a href="index.html">
+          <img width="190px" class="img-fluid" src="img/logo.svg" alt="Logo Reserva" title="Ir al Inicio">
+        </a>
+      </figure>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#menu" aria-label="Activa la navegación"
+        aria-controls="menu">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </button>
+
+
+      <nav class="justify-content-center collapse navbar-collapse " id="menu">
+        <div class="navbar-nav ">
+          <a class="shadow-lg border border-success nav-item nav-link" title="Ir a Home" href="index.html" tabindex="2">
+            <dt>Home </dt>
+          </a>
+          <a class="shadow-lg border border-success nav-item nav-link" title="Ir a Quienes somos"
+            href="Quienes somos.html" tabindex="3">
+            <dt>Quienes somos</dt>
+          </a>
+          <a class="shadow-lg border border-success nav-item nav-link" title="Ir a Fauna" href="Fauna.html"
+            tabindex="4">
+            <dt>Fauna</dt>
+          </a>
+          <a class="shadow-lg border border-success nav-item nav-link" title="Ir a Flora" href="Flora.html"
+            tabindex="5">
+            <dt>Flora</dt>
+          </a>
+          <a class="shadow-lg border border-success nav-item nav-link activo" title="Ir a Agendar visita"
+            href="Agenda.html" tabindex="7">
+            <dt>Agendar visita</dt><span class="sr-only">(actual)</span>
+          </a>
+          <a class="shadow-lg border border-success nav-item nav-link" title="Ir a Tienda" href="Tienda.html"
+            tabindex="8">
+            <dt>Tienda</dt>
+          </a>
+        </div>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+    <header class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Agenda de visita</h1>
+      <hr>
+      <p class="lead">En los siguientes botones encontrarás los formularios para coordinar tu visita, agendate!</p>
+    </header>
+    
+      <div class="row align-items-center justify-content-center">
+      <button class="btn btn-success" type="button" data-toggle="collapse" href="#particular" role="button"
+        aria-expanded="false" aria-controls="particular" title="Formulario para visita de personas">Visita Particular</button>
+      <button class="btn btn-success" type="button" data-toggle="collapse" href="#institucional" role="button"
+        aria-expanded="false" aria-controls="institucional" title="Formulario para visita de Instituciones">Visita Institucional</button>
+
+    </div>
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+      <div class="col">
+        <div class="collapse multi-collapse" id="particular">
+          <div class="card card-body">
+            <h4>Datos del visitante</h4>
+            <form>
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="alguien@ejemplo.com"
+                  aria-describedby="emailTip" required autofocus>
+                <small class="form-text text-muted" id="emailTip">Nunca compartiremos tus datos</small>
+              </div>
+              <div class="form-group">
+                <label for="nombreOrg">Nombre de la organización</label>
+                <input type="text" class="form-control" id="nombreOrg"
+                  placeholder="Ingrese nombre de la agencia u organización" required>
+              </div>
+              <div class="form-group">
+                <label for="lugarPro">Lugar de procedencia</label>
+                <input type="text" class="form-control" id="lugarPro" placeholder="Pais, Estado, Ciudad" required>
+              </div>
+
+              <label for="coordinadorVisita">
+                <h6>Coordinador de la visita</h6>
+              </label>
+              <div class="form-group" id="coordinadorVisita">
+                <div class="form-row mb-3">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Primer Nombre" required>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Segundo Nombre">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Primer Apellido" required>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Segundo Apellido">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="telefono">Teléfono de contacto</label>
+                <input type="tel" id="telefono" pattern="[0-9]{3} - [0-9]{3} - [0-9]{4}" class="form-control"
+                  placeholder="123 456 4564">
+              </div>
+
+              <div class="form group">
+                <div class="form-row">
+                  <div class="col">
+                    <label for="numMayores">Visitantes mayores de edad</label>
+                    <input type="numb" class="form-control" id="numMayores"
+                      placeholder="Ingrese cantidad de mayores de edad">
+                  </div>
+                  <div class="col">
+                    <label for="numMenores">Visitantes menores de edad</label>
+                    <input type="numb" class="form-control" id="numMayores"
+                      placeholder="Ingrese cantidad de menores de edad">
+                  </div>
+                </div>
+              </div>
+              <br>
+
+
+              <h4>Datos de la visita</h4>
+
+              <div class="form group">
+                <label for="fecha" id="datosDeLaVisita">Fecha prevista</label>
+                <input type="date" class="form-control" id="fecha" value="2020-09-10">
+              </div>
+
+              <div class="form-group">
+                <label for="horario"> Horario de la visita </label>
+                <select id="horario" class="form-control">
+                  <optgroup label="Selección de horario">
+                    <option value="9:30 horas">9:30 horas</option>
+                    <option value="14:30 horas" selected>14:30 horas</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">
+                  <h5>Escribe tu mensaje</h5>
+                </label>
+                <textarea id="mensaje" rows="3" class="form-control"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+              <input type="reset" class="btn btn-default" value="Limpiar">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+    <div class="col">
+      <div class="collapse multi-collapse" id="institucional">
+        <div class="card card-body">
+          <h4>Datos de la institución</h4>
+          <form>
+            <div role="radiogroup" aria-labelledby="lblRadios">
+              <label id="lblRadios">¿Quién organiza la visita?</label>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" value="opcion1" id="radio1" name="orgVisita" checked>
+                <label for="radio1">Institución Educativa</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" value="opcion2" id="radio2" name="orgVisita">
+                <label for="radio2">Agencia de Turismo</label>
+              </div>
+            </div>
+            <div role="radiogroup" aria-labelledby="TipoRadios">
+              <label id="TipoRadios">Tipo de Institución Educativa</label>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" value="opcion1" id="radio3" name="tipoInst" checked>
+                <label for="radio3">Sector Público</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" value="opcion2" id="radio4" name="tipoInst">
+                <label for="radio4">Sector Privado</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="nombreOrg">Nombre de la Institución</label>
+              <input type="text" class="form-control" id="nombreOrg" placeholder="Ingrese nombre de la Institución"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="alguien@ejemplo.com"
+                aria-describedby="emailTip" required autofocus>
+              <small class="form-text text-muted">Nunca compartiremos tus datos</small>
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono de contacto</label>
+              <input type="tel" id="telefono" pattern="[0-9]{3} - [0-9]{3} - [0-9]{4}" class="form-control"
+                placeholder="123 456 4564">
+            </div>
+            <div class="form group">
+              <div class="form-row">
+                <div class="col">
+                  <label for="numMayores">Visitantes mayores de edad</label>
+                  <input type="numb" class="form-control" id="numMayores"
+                    placeholder="Ingrese cantidad de mayores de edad">
+                </div>
+                <div class="col">
+                  <label for="numMenores">Visitantes menores de edad</label>
+                  <input type="numb" class="form-control" id="numMayores"
+                    placeholder="Ingrese cantidad de menores de edad">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lugarPro">Lugar de procedencia</label>
+              <input type="text" class="form-control" id="lugarPro" placeholder="Pais, Estado, Ciudad" required>
+            </div>
+            <div class="form-group">
+              <label for="nivelEst">Nivel de estudios</label>
+              <select id="nivelEst" class="form-control">
+                <option selected>Seleccionar Nivel de estudios</option>
+                <option>Jardin</option>
+                <option>Primaria</option>
+                <option>Secuandaria</option>
+                <option>Universidad</option>
+                <option>Otros</option>
+              </select>
+            </div>
+            <h4>Datos de la visita</h4>
+            <div class="form group">
+              <label for="fecha2">Fecha prevista</label>
+              <input type="date" class="form-control" id="fecha2" value="2020-09-10">
+            </div>
+            <div class="form-group">
+              <label for="horario2"> Horario de la visita </label>
+              <select id="horario2" class="form-control">
+                <optgroup label="Selección de horario">
+                  <option value="9:30 horas">9:30 horas</option>
+                  <option value="14:30 horas" selected>14:30 horas</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje2">
+                <h5>Escribe tu mensaje</h5>
+              </label>
+              <textarea id="mensaje2" rows="3" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <input type="reset" class="btn btn-default" value="Limpiar">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-6 col-md-3">
+          <figure>
+              <img class="img-fluid img-thumbnail" src="img/visita3.jpg" alt="Foto visita guiada"
+              title="Fotografía de visitantes">
+          </figure>
+      </div>
+      <div class="col-6 col-md-3">
+          <figure>
+              <img class="img-fluid img-thumbnail" src="img/visita4.jpg" alt="Foto visita guiada"
+              title="Fotografía de visita guiada">
+          </figure>
+      </div>
+      <div class="col-6 col-md-3">
+          <figure>
+              <img class="img-fluid img-thumbnail" src="img/visita.jpg" alt="Foto visita agencia turismo"
+              title="Fotografía de visita de agencia turismo">
+          </figure>
+      </div>
+      <div class="col-6 col-md-3">
+          <figure>
+              <img class="img-fluid img-thumbnail" src="img/visita2.jpg" alt="Foto visita escolares"
+              title="Fotografía de escolares">
+          </figure>
+      </div>
+  </div>
+  </main>
+
+  <footer class="container border-top pt-4">
+    <div class="row">
+      <div class="col-6 col-sm-3">
+        <header>
+          <h5 class="foot-titulo">¿Cómo llegar?</h5>
+        </header>
+        </li><a href="./footer/mapa.html"><img src="img/ubicacion.svg" title="Ir a GoogleMaps">
+          Mapa</li>
+          <figure>
+            <img class="img-fluid" src="img/mapa.svg" alt="Mapa de Colombia">
+          </figure>
+        </a>
+      </div>
+      <div class="col-6 col-sm-3">
+        <header>
+          <h5 class="foot-titulo">Contactanos</h5>
+        </header>
+        <ul class="text-muted list-unstyled">
+          <li><a href="https://web.whatsapp.com/"><img src="img/whatsapp.svg" title="Enviar mensaje">
+              Whatsapp</li></a>
+
+          </li><a href="mailto:quetzal@reserva.org"><img src="img/mail.svg" title="Enviar mail">
+            quetzal@reserva.org</li></a>
+        </ul>
+      </div>
+      <div class="col-6 col-sm-3">
+        <header>
+          <h5 class="foot-titulo">Seguinos en redes</h5>
+        </header>
+        <ul class="text-muted list-unstyled">
+          <li><a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.svg" title="Ir a facebook">
+              Facebook</li></a>
+          <li><a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.svg" title="Ir a Instagram">
+              Instagram</li></a>
+          <li><a href="https://www.youtube.com/watch?v=3nyP8i1juF0" target="_blank"><img src="img/youtube.svg"
+                title="Ir a Youtube"> Youtube</li></a>
+        </ul>
+      </div>
+      <div class="col-6 col-sm-3">
+        <header>
+          <h5 class="foot-titulo">Novedades</h5>
+        </header>
+        <ul class="text-muted list-unstyled">
+          <li><button type="button" class="btn btn-link p-0 btnsub" data-toggle="modal" data-target="#myModal">
+              Suscribite a nuestro portal
+            </button>
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Recibi noticias y promociones</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput">Nombre</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput"
+                          placeholder="Ingrese su nombre">
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput2">e-mail</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2"
+                          placeholder="alguien@email.com">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                  </div>
+                </div>
+          </li>
+          <li><a href="./footer/Consejos.html">
+              Consejos para el viajero
+            </a>
+          </li>
+          <li> <a href="./footer/Preguntas frecuentes.html">
+              Preguntas Frecuentes
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-12"><small class="text-muted">&copy; 2017-2020</small></div>
+      </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+
+</html>
